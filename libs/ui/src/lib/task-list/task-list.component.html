@@ -1,0 +1,8 @@
+<div class="list-items">
+    <p>Mohsine hajar</p>
+    <div *ngIf="loading">loading</div>
+    <div *ngIf="!loading && tasks.length === 0">empty</div>
+    <angular-workspace-task *ngFor="let task of tasks" [task]="task" (onArchiveTask)="onArchiveTask.emit($event)"
+        (onPinTask)="onPinTask.emit($event)">
+    </angular-workspace-task>
+</div>
