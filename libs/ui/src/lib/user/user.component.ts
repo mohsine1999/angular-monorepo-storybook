@@ -5,11 +5,11 @@ import { MatCardModule } from '@angular/material/card';
 import { UserListComponent } from "../user-list/user-list.component";
 
 @Component({
-    selector: 'angular-workspace-user',
-    standalone: true,
-    templateUrl: './user.component.html',
-    styleUrls: ['./user.component.css'],
-    imports: [CommonModule, MatCardModule, UserListComponent]
+  selector: 'angular-workspace-user',
+  standalone: true,
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css'],
+  imports: [CommonModule, MatCardModule]
 })
 export class UserComponent {
 
