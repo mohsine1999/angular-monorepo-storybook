@@ -1,4 +1,4 @@
-import { Meta, Story, moduleMetadata } from '@storybook/angular';
+import { Meta, moduleMetadata } from '@storybook/angular';
 import { UserComponent } from './user.component';
 import { CdkTableModule } from '@angular/cdk/table';
 import { MatTableModule } from '@angular/material/table';
@@ -13,10 +13,6 @@ export default {
   ],
 } as Meta<UserComponent>;
 
-const Template: Story<UserComponent> = (args: UserComponent) => ({
-  component: UserComponent,
-  props: args,
-});
 
 export const Primary = (args: UserComponent) => ({
   props: args,

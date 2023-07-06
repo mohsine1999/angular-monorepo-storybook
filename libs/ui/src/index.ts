@@ -11,3 +11,5 @@ export * from './lib/text/text.component';
 export * from './lib/user/user.component';
 
 export * from './lib/user-list/user-list.component';
+
+export * from './lib/table-header/table-header.component';

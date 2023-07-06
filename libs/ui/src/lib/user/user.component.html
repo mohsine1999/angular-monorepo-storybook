@@ -1,26 +1,13 @@
 <ng-container *ngIf="user">
   <table mat-table class="user-table">
-    <ng-container matColumnDef="firstName">
-      <th mat-header-cell *matHeaderCellDef>First Name</th>
-      <td mat-cell>{{ user.firstName }}</td>
-    </ng-container>
 
-    <ng-container matColumnDef="lastName">
-      <th mat-header-cell *matHeaderCellDef>Last Name</th>
-      <td mat-cell>{{ user.lastName }}</td>
-    </ng-container>
+    <td mat-cell>{{ user.firstName }}</td>
 
-    <ng-container matColumnDef="age">
-      <th mat-header-cell *matHeaderCellDef>Age</th>
-      <td mat-cell>{{ user.age }}</td>
-    </ng-container>
+    <td mat-cell>{{ user.lastName }}</td>
 
-    <ng-container matColumnDef="salary">
-      <th mat-header-cell *matHeaderCellDef>Salary</th>
-      <td mat-cell>{{ user.salary }}</td>
-    </ng-container>
+    <td mat-cell>{{ user.age }}</td>
 
-    <tr mat-header-row *matHeaderRowDef="columns"></tr>
-    <tr mat-row *matRowDef="let row; columns: columns"></tr>
+    <td mat-cell>{{ user.salary }}</td>
+
   </table>
 </ng-container>
