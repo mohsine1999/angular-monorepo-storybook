@@ -1,24 +1,4 @@
 
-
-<table mat-table [dataSource]="users">
-    <ng-container matColumnDef="firstName">
-      <th mat-header-cell *matHeaderCellDef>First Name</th>
-      
-    </ng-container>
-    <ng-container matColumnDef="lastName">
-      <th mat-header-cell *matHeaderCellDef>Last Name</th>
-    </ng-container>
-    <ng-container matColumnDef="age">
-      <th mat-header-cell *matHeaderCellDef>Age</th>
-    </ng-container>
-    <ng-container matColumnDef="salary">
-      <th mat-header-cell *matHeaderCellDef>Salary</th>
-    </ng-container>
-
-    <angular-workspace-user *ngFor="let user of users" [user]="user"></angular-workspace-user>
-
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let user; columns: displayedColumns;"></tr>
-  </table>
-  
+<ng-container *ngFor="let user of users">
+    <angular-workspace-user [user]="user"></angular-workspace-user>
+</ng-container>

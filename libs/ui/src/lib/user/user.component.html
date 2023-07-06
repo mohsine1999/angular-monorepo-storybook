@@ -1,9 +1,26 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>{{ user.firstName }} {{ user.lastName }}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p>Age: {{ user.age }}</p>
-    <p>Salary: {{ user.salary }} DH.</p>
-  </mat-card-content>
-</mat-card>
+<ng-container *ngIf="user">
+  <table mat-table class="user-table">
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef>First Name</th>
+      <td mat-cell>{{ user.firstName }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef>Last Name</th>
+      <td mat-cell>{{ user.lastName }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef>Age</th>
+      <td mat-cell>{{ user.age }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="salary">
+      <th mat-header-cell *matHeaderCellDef>Salary</th>
+      <td mat-cell>{{ user.salary }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns"></tr>
+  </table>
+</ng-container>

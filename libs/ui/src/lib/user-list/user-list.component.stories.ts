@@ -1,9 +1,16 @@
-import { Meta } from '@storybook/angular';
+import { Meta, moduleMetadata } from '@storybook/angular';
 import { UserListComponent } from './user-list.component';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatTableModule } from '@angular/material/table';
 
 export default {
   title: 'Me/UserListComponent',
   component: UserListComponent,
+  decorators: [
+    moduleMetadata({
+      imports: [MatTableModule, CdkTableModule],
+    }),
+  ],
 } as Meta<UserListComponent>;
 
 export const Primary = {

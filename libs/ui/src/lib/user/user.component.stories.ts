@@ -1,9 +1,16 @@
-import { Meta, Story } from '@storybook/angular';
+import { Meta, Story, moduleMetadata } from '@storybook/angular';
 import { UserComponent } from './user.component';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatTableModule } from '@angular/material/table';
 
 export default {
   title: 'ME/User',
   component: UserComponent,
+  decorators: [
+    moduleMetadata({
+      imports: [MatTableModule, CdkTableModule],
+    }),
+  ],
 } as Meta<UserComponent>;
 
 const Template: Story<UserComponent> = (args: UserComponent) => ({
@@ -11,12 +18,16 @@ const Template: Story<UserComponent> = (args: UserComponent) => ({
   props: args,
 });
 
-export const Primary = Template.bind({});
+export const Primary = (args: UserComponent) => ({
+  props: args,
+});
+
 Primary.args = {
   user: {
-    firstName: 'Mosine',
-    lastName: 'hajjar',
+    firstName: 'John',
+    lastName: 'Doe',
     age: 30,
     salary: 50000,
   },
 };
+
